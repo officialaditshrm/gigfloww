@@ -1,6 +1,6 @@
 import './Upbar.css'
 import Logo from "./logo.png"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 
 function Header () {
 
@@ -13,18 +13,21 @@ function Header () {
 
     const handleNav = (event) => {
         setNav(!navv)
+        if (services === true) {
+            setServices(false)
+        }
     }
 
     return <section>
         <div id = "header">
             <div id = "logo">
-                <img src = { Logo } height = "100px" alt = "Logo"/>
+                <img src = { Logo } height = "150px" alt = "Logo"/>
             </div>
             <div id = "navbar">
                 <button id="navopen" onClick = { handleNav }>Nav</button>
                 
                     {navv && (
-                        <nav id = "nav">
+                        <div id = "nav">
                             <a href = "/">Home</a>
                             <a href = "/signup">Signup</a>
                             <div id = "servicediv" onClick = { handleServices }>Services</div>
@@ -37,7 +40,7 @@ function Header () {
                                 </div>
                             )}
                             <a href = "#">Contact</a>
-                        </nav>
+                        </div>
                     )}
                 
             </div>

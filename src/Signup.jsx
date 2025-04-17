@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './App.css'
 
-import Header from "./components/Upbar.jsx"
+import Upbar from "./components/Upbar.jsx"
 function Signup () {
     const [error, setError] = useState(false)
 
@@ -22,27 +22,29 @@ function Signup () {
     
 
     return (<section>
-        <Header />
+        <Upbar />
         <div>
-
-        </div>
-        <div>
-            <form onSubmit = { validate }>
-                <input type = "text" placeholder = "Aditya Sharma" id = "nameinput"/>
-                {error && (
-                    <span className= "name_error">Enter valid name</span>
-                    )
-                }<br/>
-                <input type = "email" placeholder = "officialaditshrm@gmail.com" /><br />
-                <select>
-                    <option selected disabled>Choose your Skill-set</option>
-                    <option >Web Development</option>
-                    <option>Machine Learning</option>
-                    <option>Generative AI</option>
-                </select>
-                <br />
-                <input type = "submit" />
-            </form>
+            <div id = "formdiv">
+                <form onSubmit = { validate }>
+                    <input type = "text" placeholder = "Aditya Sharma" id = "nameinput"/>
+                    {error && (
+                        <span className= "name_error">Enter valid name</span>
+                        )
+                    }<br/>
+                    <input id = "emailinput" type = "email" placeholder = "officialaditshrm@gmail.com" /><br />
+                    <select id = "skillsinput">
+                        <option selected disabled>Choose your Skill-set</option>
+                        <option >Web Development</option>
+                        <option>Machine Learning</option>
+                        <option>Generative AI</option>
+                    </select>
+                    <br />
+                    <input type = "submit" />
+                </form>
+                <div id = "rest">
+                    <a href = "#">Already have an account?</a>
+                </div>
+            </div>
         </div>
     </section>
     )
