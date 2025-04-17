@@ -102,8 +102,26 @@ body {
     margin: 2vw;
 }
 
-#nameinput, #emailinput, #skillsinput{
+#name, #email, #skills{
     padding: 10px;
+    width: 20vw;
+    border-radius: 10px;
+    border: none;
+}
+
+#skills:hover{
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    transform: scale(1.05)
 }
 
 #rest {

@@ -7,6 +7,7 @@ function Header () {
     const [services, setServices] = useState(false)
     const [navv, setNav] = useState(false)
 
+
     const handleServices = () => {
         setServices(!services)
     }
@@ -18,14 +19,19 @@ function Header () {
         }
     }
 
+
+
     return <section>
         <div id = "header">
             <div id = "logo">
                 <img src = { Logo } height = "150px" alt = "Logo"/>
             </div>
             <div id = "navbar">
-                <button id="navopen" onClick = { handleNav }>Nav</button>
-                
+                <div className={`ham-menu ${navv ? "active" : ""}`} onClick = { handleNav }>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                     {navv && (
                         <div id = "nav">
                             <a href = "/">Home</a>
@@ -34,9 +40,9 @@ function Header () {
                             { services && (
                                 <div id = "servicelist" >
                                     <a href = "#">Service 1</a>
-                                    <a href = "#">Service 1</a>
-                                    <a href = "#">Service 1</a>
-                                    <a href = "#">Service 1</a>
+                                    <a href = "#">Service 2</a>
+                                    <a href = "#">Service 3</a>
+                                    <a href = "#">Service 4</a>
                                 </div>
                             )}
                             <a href = "#">Contact</a>

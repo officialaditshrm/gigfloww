@@ -31,15 +31,15 @@ function Landing() {
                     </div>
                 </div>
                 <div className = "feature">
-                    <h3 className = "featurehead">Feature 1</h3>
+                    <h3 className = "featurehead">Feature 2</h3>
                     <div className = "featureabout">
-                        This is the description of Feature 1
+                        This is the description of Feature 2
                     </div>
                 </div>
                 <div className = "feature">
-                    <h3 className = "featurehead">Feature 1</h3>
+                    <h3 className = "featurehead">Feature 3</h3>
                     <div className = "featureabout">
-                        This is the description of Feature 1
+                        This is the description of Feature 3
                     </div>
                 </div>
                 <div className = "feature">
