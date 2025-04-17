@@ -19,38 +19,48 @@
 }
 
 #nav {
+    border-radius: 15px;
+    font-family:'Times New Roman', Times, serif;
     position: absolute;
-    width: 15vw;
+    width: 20vw;
     right: 1%;
-    background-color: black;
-}
-
-#navlist {
-    list-style: none;
+    background-color: rgba(0,0,0, 0.9);
     padding: 10px;
 }
 
-li:hover{
-    background-color: rgb(255, 255, 255, 0.3);
-}
-
-#navlist > li, #navlist > li> a, #services > li > a{
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-#services > li{
-    padding: 10px;
-}
-
-li:hover {
+#nav>a:hover, #servicediv:hover, #servicelist>a:hover{
     cursor: pointer;
     transform: scale(1.05);
     transition-duration: 0.15ms;
-
+    background-color: rgb(255, 255, 255, 0.3);
 }
+
+#nav > a, #servicediv{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#servicelist {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#nav > a, #servicediv{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#servicelist > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
 
 #services {
     list-style: none;

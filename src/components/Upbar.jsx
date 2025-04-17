@@ -25,21 +25,18 @@ function Header () {
                 
                     {navv && (
                         <nav id = "nav">
-                            <ul id = "navlist">
-                                <li><a href = "/">Home</a></li>
-                                <li><a href = "/signup">Signup</a></li>
-                                <li onMouseEnter = { handleServices } onMouseLeave = { handleServices }><a>Services</a>
-                                { services && (
-                                    <ul id = "services" >
-                                        <li><a href = "#">Service 1</a></li>
-                                        <li><a href = "#">Service 1</a></li>
-                                        <li><a href = "#">Service 1</a></li>
-                                        <li><a href = "#">Service 1</a></li>
-                                    </ul>
-                                )}
-                                </li>
-                                <li><a href = "#">Contact</a></li>
-                            </ul>
+                            <a href = "/">Home</a>
+                            <a href = "/signup">Signup</a>
+                            <div id = "servicediv" onClick = { handleServices }>Services</div>
+                            { services && (
+                                <div id = "servicelist" >
+                                    <a href = "#">Service 1</a>
+                                    <a href = "#">Service 1</a>
+                                    <a href = "#">Service 1</a>
+                                    <a href = "#">Service 1</a>
+                                </div>
+                            )}
+                            <a href = "#">Contact</a>
                         </nav>
                     )}
                 
