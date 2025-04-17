@@ -1,0 +1,57 @@
+#header {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#navopen {
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+}
+
+#navopen:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#nav {
+    position: absolute;
+    width: 15vw;
+    right: 1%;
+    background-color: black;
+}
+
+#navlist {
+    list-style: none;
+    padding: 10px;
+}
+
+li:hover{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+#navlist > li, #navlist > li> a, #services > li > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#services > li{
+    padding: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: 0.15ms;
+
+}
+
+#services {
+    list-style: none;
+}
